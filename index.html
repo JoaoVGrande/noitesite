@@ -58,5 +58,20 @@
     <footer>
         <p>Contato: <a href="mailto:noitepurpuras@outlook.com">noitepurpuras@outlook.com</a></p>
     </footer>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // (Opcional) Fecha outros cards abertos para focar apenas no atual
+                cards.forEach(c => {
+                    if (c !== card) c.classList.remove('ativa');
+                });
+                // Alterna o estado do card clicado
+                card.classList.toggle('ativa');
+            });
+        });
+    </script>
 </body>
 </html>

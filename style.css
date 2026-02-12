@@ -91,7 +91,8 @@ h3 {
     text-align: center;
 }
 
-.card:hover .card-resumo {
+.card:hover .card-resumo,
+.card.ativa .card-resumo {
     height: 100%;
 }
 
@@ -117,4 +118,13 @@ footer a {
 
 footer a:hover {
     opacity: 0.8;
+}
+
+/* --- Ajustes para Celular --- */
+@media (max-width: 640px) {
+    .card {
+        width: 100%;       /* Tenta ocupar a largura da tela */
+        max-width: 340px;  /* Mas trava em 340px para não ficar gigante */
+        height: 420px;     /* Ajuste leve na altura para manter a proporção */
+    }
 }
