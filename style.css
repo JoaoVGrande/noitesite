@@ -2,8 +2,8 @@
     /* --- CAMPOS RESERVADOS PARA CUSTOMIZAÇÃO --- */
     
     /* Fontes */
-    --fonte-titulo: 'Pristina', serif; /* Fonte do título */
-    --fonte-texto: 'Bahnschrift Light', sans-serif; /* Fonte do texto */
+    --fonte-titulo: 'Pristina', 'Tangerine', cursive; /* Tenta Pristina, senão usa Tangerine */
+    --fonte-texto: 'Lato', sans-serif; /* Fonte do texto */
     
     /* Cores */
     --cor-fundo-site: #280041; /* Cor de fundo do site */
@@ -13,6 +13,10 @@
     /* Cards */
     --cor-fundo-card: #1e1e1e;
     --cor-overlay-card: rgba(0, 0, 0, 0.9); /* Fundo do resumo ao passar o mouse */
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -35,11 +39,11 @@ header {
 h1 {
     font-family: var(--fonte-titulo);
     color: var(--cor-titulo);
-    font-size: 5rem;
+    font-size: 6rem; /* Aumentado para compensar o tamanho da fonte manuscrita */
     margin-bottom: 20px;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 .explicacao {
     font-size: 1.2rem;
@@ -122,6 +126,13 @@ footer a:hover {
 
 /* --- Ajustes para Celular --- */
 @media (max-width: 640px) {
+    header {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 4rem; /* Ajuste maior para celular */
+        line-height: 1.2;
+    }
     .card {
         width: 100%;       /* Tenta ocupar a largura da tela */
         max-width: 340px;  /* Mas trava em 340px para não ficar gigante */
